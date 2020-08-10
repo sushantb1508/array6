@@ -1,0 +1,17 @@
+arr= list(map(int,input().split()))
+n =len(arr)
+flag=1
+s = 0
+l = n-1
+arr1=[]
+for i in range(0,n):
+    if l>=s:
+        if flag==1:
+            arr1.append(arr[l])
+            flag=0
+            l =l -1
+        else:
+            arr1.append(arr[s])
+            flag=1
+            s=s+1
+print(*arr1)
